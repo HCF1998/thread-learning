@@ -85,11 +85,25 @@
   <component name="PropertiesComponent">
     <property name="RESTKit.sync" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager" selected="Application.GetCurrentThread">
+  <component name="RunManager" selected="Application.ExecuteOrder">
+    <configuration name="ExecuteOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hcf.learning.demo2.ExecuteOrder" />
+      <module name="thread-learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hcf.learning.demo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetCurrentThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hcf.learning.demo1.GetCurrentThread" />
       <module name="thread-learning" />
@@ -116,9 +130,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.GetCurrentThread" />
+      <item itemvalue="Application.ExecuteOrder" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExecuteOrder" />
         <item itemvalue="Application.GetCurrentThread" />
         <item itemvalue="Application.Main" />
       </list>
@@ -132,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654768404811</updated>
-      <workItem from="1654768406494" duration="5249000" />
+      <workItem from="1654768406494" duration="10563000" />
     </task>
     <servers />
   </component>
