@@ -7,7 +7,7 @@ public class SingleTonTest6 {
         try (FileOutputStream fileInputStream = new FileOutputStream(new File("myObject-File.txt"));
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileInputStream);
         ) {
-            MyObject5 myObject = MyObject5.getInstance();
+            MyObject6 myObject = MyObject6.getInstance();
             System.out.println("serializable myObject = " + myObject.hashCode() + " useInfo = " + myObject.userInfo.hashCode());
             objectOutputStream.writeObject(myObject);
         } catch (FileNotFoundException e) {
@@ -19,8 +19,8 @@ public class SingleTonTest6 {
         try (FileInputStream fileInputStream = new FileInputStream(new File("myObject-File.txt"));
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         ) {
-            MyObject5 myObject5 = (MyObject5) objectInputStream.readObject();
-            System.out.println("serializable myObject = " + myObject5.hashCode() + " useInfo = " + myObject5.userInfo.hashCode());
+            MyObject6 myObject6 = (MyObject6) objectInputStream.readObject();
+            System.out.println("serializable myObject = " + myObject6.hashCode() + " useInfo = " + myObject6.userInfo.hashCode());
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -31,23 +31,23 @@ public class SingleTonTest6 {
     }
 }
 
-    class MyObject5 implements Serializable {
+    class MyObject6 implements Serializable {
         private static final long serialVersionUID = 1L;
 
         public static UserInfo userInfo = new UserInfo();
 
-        private static MyObject5 myObject = new MyObject5();
+        private static MyObject6 myObject = new MyObject6();
 
-        private MyObject5() {
+        private MyObject6() {
         }
 
-        public static MyObject5 getInstance() {
+        public static MyObject6 getInstance() {
             return myObject;
         }
 
         protected Object readResolve() throws ObjectStreamException {
             System.out.println("readResolve() called");
-            return MyObject5.myObject;
+            return MyObject6.myObject;
         }
     }
 

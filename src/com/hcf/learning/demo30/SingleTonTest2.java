@@ -18,7 +18,7 @@ class MyObject2 {
 
     }
 
-    // synchronized
+    //synchronized
     public static MyObject2 getInstance() {
         if (myObject != null) {
         } else {

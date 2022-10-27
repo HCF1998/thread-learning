@@ -12,35 +12,35 @@ public class SingleTonTest4 {
     }
 }
 
-class MyObject3 {
-    private volatile static MyObject3 myObject3;
+class MyObject4 {
+    private volatile static MyObject4 myObject4;
 
-    private MyObject3() {
+    private MyObject4() {
 
     }
 
-    public static MyObject3 getInstance() {
+    public static MyObject4 getInstance() {
         try {
-            if (myObject3 != null) {
+            if (myObject4 != null) {
 
             } else {
                 Thread.sleep(3000);
-                synchronized (MyObject3.class) {
-                    if (myObject3 == null) {
-                        myObject3 = new MyObject3();
+                synchronized (MyObject4.class) {
+                    if (myObject4 == null) {
+                        myObject4 = new MyObject4();
                     }
                 }
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return myObject3;
+        return myObject4;
     }
 }
 
 class ThreadD extends Thread {
     @Override
     public void run() {
-        System.out.println(MyObject3.getInstance().hashCode());
+        System.out.println(MyObject4.getInstance().hashCode());
     }
 }

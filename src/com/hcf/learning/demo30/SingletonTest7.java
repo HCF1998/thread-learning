@@ -2,18 +2,18 @@ package com.hcf.learning.demo30;
 
 public class SingletonTest7 {
 }
-class MyObject6{
-    private static MyObject6 instance = null;
+class MyObject7 {
+    private static MyObject7 instance = null;
 
-    private MyObject6(){
+    private MyObject7(){
 
     }
 
     static {
-        instance = new MyObject6();
+        instance = new MyObject7();
     }
 
-    public static MyObject6 getInstance(){
+    public static MyObject7 getInstance(){
         return instance;
     }
 }

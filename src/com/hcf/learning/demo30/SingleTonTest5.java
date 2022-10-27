@@ -3,15 +3,15 @@ package com.hcf.learning.demo30;
 public class SingleTonTest5 {
 }
 
-class MyObject4{
+class MyObject5 {
     private static class MyObjectHandler{
-        private static MyObject4 myObject = new MyObject4();
+        private static MyObject5 myObject = new MyObject5();
 
     }
-    private MyObject4(){
+    private MyObject5(){
 
     }
-    public static MyObject4 getInstance(){
+    public static MyObject5 getInstance(){
         return MyObjectHandler.myObject;
     }
 }

@@ -12,30 +12,30 @@ public class SingleTonTest3 {
     }
 
 }
-class MyObject{
-    private static MyObject myObject;
-    private MyObject(){
+class MyObject3 {
+    private static MyObject3 myObject3;
+    private MyObject3(){
 
     }
-    public static MyObject getInstance(){
+    public static MyObject3 getInstance(){
         try{
-            if (myObject != null){
+            if (myObject3 != null){
             }else{
                 Thread.sleep(3000);
-                synchronized(MyObject.class){
-                    myObject = new MyObject();
+                synchronized(MyObject3.class){
+                    myObject3 = new MyObject3();
                 }
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return myObject;
+        return myObject3;
     }
 }
 
 class ThreadC extends Thread{
     @Override
     public void run() {
-        System.out.println(MyObject.getInstance().hashCode());
+        System.out.println(MyObject3.getInstance().hashCode());
     }
 }
