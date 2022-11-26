@@ -1,13 +1,12 @@
 package com.hcf.learning.demo36;
 
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
-public class ExecutorsTestSynchronousQueue {
+public class ExecutorsTest8SynchronousQueue {
     public static void main(String[] args) throws InterruptedException {
         Runnable runnable = new Runnable(){
             @Override
