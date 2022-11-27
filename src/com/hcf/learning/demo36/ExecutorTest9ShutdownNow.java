@@ -7,7 +7,8 @@ import java.util.concurrent.TimeUnit;
 public class ExecutorTest9ShutdownNow {
     public static void main(String[] args) throws InterruptedException {
         MyRunnable91 myRunnable91 = new MyRunnable91();
-        ThreadPoolExecutor pool = new ThreadPoolExecutor(2,9999,9999L, TimeUnit.SECONDS,new LinkedBlockingQueue<>());
+        ThreadPoolExecutor pool = new ThreadPoolExecutor(2, 9999, 9999L,
+                TimeUnit.SECONDS, new LinkedBlockingQueue<>());
 
         pool.execute(myRunnable91);
         pool.execute(myRunnable91);
